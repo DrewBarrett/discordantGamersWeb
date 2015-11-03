@@ -1,0 +1,33 @@
+
+.teamspeak a {
+    text-decoration: none;
+}
+
+.teamspeak a:link {
+    text-decoration: none;
+/*    color:gray;*/
+}
+
+.videopane a:link{
+    text-decoration: none;
+}
+
+.videopane a{
+    text-decoration: none;
+}
+
+.videopane a:hover{
+    background-color: gray;
+}
+
+.social-header {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
+.social-footer a:hover{
+    color: black;
+}
+.social-footer a{
+    color: #666666;
+}
