@@ -27,7 +27,7 @@ function getVids(pid) {
             $.each(data.items, function (i, item) {
                 results =
                     '<div class=\"panel panel-default videopane social-footer\">' + 
-                        '<a href=\"' + item.snippet.resourceId.videoId + '\" class=\"videopane\">' +
+                        '<a href=\"https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId + '\" class=\"videopane\">' +
                             '<div class=\"media panel-body videopane\">' +
                                 '<div class=\"media-left col-md-6 col-xs-10\">' +
                                     '<img class=\"media-object img-responsive\" src=\"' + item.snippet.thumbnails.medium.url + '" alt=\" ' + item.snippet.title + '\" height=\"180\" width=\"320\">' +
