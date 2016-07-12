@@ -26,16 +26,18 @@ function getVids(pid) {
             var results;
             $.each(data.items, function (i, item) {
                 results =
-                    '<a href=\"' + item.snippet.resourceId.videoId + '\" class=\"videopane\">' +
-                        '<div class=\"media panel-body videopane\">' +
-                            '<div class=\"media-left col-md-6 col-xs-10\">' +
-                                '<img class=\"media-object img-responsive\" src=\"' + item.snippet.thumbnails.medium.url + '" alt=\" ' + item.snippet.title + '\" height=\"180\" width=\"320\">' +
+                    '<div class=\"panel panel-default videopane social-footer\">' + 
+                        '<a href=\"' + item.snippet.resourceId.videoId + '\" class=\"videopane\">' +
+                            '<div class=\"media panel-body videopane\">' +
+                                '<div class=\"media-left col-md-6 col-xs-10\">' +
+                                    '<img class=\"media-object img-responsive\" src=\"' + item.snippet.thumbnails.medium.url + '" alt=\" ' + item.snippet.title + '\" height=\"180\" width=\"320\">' +
+                                '</div>' +
+                                '<div class=\"media-body videopane\">' +
+                                    '<h4 class=\"media-heading videopane\">' + item.snippet.title + '</h4>' + item.snippet.description +
+                                '</div>' +
                             '</div>' +
-                            '<div class=\"media-body videopane\">' +
-                                '<h4 class=\"media-heading videopane\">' + item.snippet.title + '</h4>' + item.snippet.description +
-                            '</div>' +
-                        '</div>' +
-                   ' </a>'
+                       ' </a>' +
+                '</div>'
                 $('#results').append(results);
             });
         }
