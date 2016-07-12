@@ -26,7 +26,7 @@ function getVids(pid) {
             var results;
             $.each(data.items, function (i, item) {
                 results =
-                    '<a href=\"' + snippet.resourceId.videoId + '\" class=\"videopane\">' +
+                    '<a href=\"' + item.snippet.resourceId.videoId + '\" class=\"videopane\">' +
                         '<div class=\"media panel-body videopane\">' +
                             '<div class=\"media-left col-md-6 col-xs-10\">' +
                                 '<img class=\"media-object img-responsive\" src=\"' + item.snippet.thumbnais.medium.url + '" alt=\" ' + snippet.title + '\" height=\"180\" width=\"320\">' +
