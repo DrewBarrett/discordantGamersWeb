@@ -25,7 +25,17 @@ function getVids(pid) {
         function (data) {
             var results;
             $.each(data.items, function (i, item) {
-                results = '<li>' + item.snippet.title + '</li>';
+                results =
+                    '<a href=\"' + snippet.resourceId.videoId + '\" class=\"videopane\">' +
+                        '<div class=\"media panel-body videopane\">' +
+                            '<div class=\"media-left col-md-6 col-xs-10\">' +
+                                '<img class=\"media-object img-responsive\" src=\"' + item.snippet.thumbnais.medium.url + '" alt=\" ' + snippet.title + '\" height=\"180\" width=\"320\">' +
+                            '</div>' +
+                            '<div class=\"media-body videopane\">' +
+                                '<h4 class=\"media-heading videopane\">' + item.snippet.title + '</h4>' + item.snippet.description +
+                            '</div>' +
+                        '</div>' +
+                   ' </a>'
                 $('#results').append(results);
             });
         }
