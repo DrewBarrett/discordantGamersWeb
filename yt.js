@@ -39,7 +39,12 @@ function getVids(pid) {
                        ' </a>' +
                 '</div>'
             });
-            $('#results').append(results);
+            $('#pagination-container').pagination({
+                dataSource: [1, 2, 3, 4, 5, 6, 7, ... , 195],
+                callback: function(pagination) {
+                    $('#results').html(results);
+                }
+            })
         }
     );
 }
