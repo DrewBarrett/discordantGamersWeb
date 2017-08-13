@@ -23,9 +23,9 @@ function getVids(pid) {
             key: 'AIzaSyBehqGZcuf5LyAXbrZTghunvEZtFVIlNSQ'
         },
         function (data) {
-            var results = "";
+            var resultArray = [];
             $.each(data.items, function (i, item) {
-                results +=
+                var results =
                     '<div class=\"panel panel-default videopane social-footer\">' +
                         '<a href=\"https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId + '\" class=\"videopane\">' +
                             '<div class=\"media panel-body videopane\">' +
@@ -38,17 +38,18 @@ function getVids(pid) {
                             '</div>' +
                        ' </a>' +
                 '</div>'
+                resultArray.push(results);
             });
             function template(data) {
-                var html = '<ul>';
+                var html = '';
                 $.each(data, function(index, item){
-                    html += '<li>'+ item +'</li>';
+                    html += ''+ item +'';
                 });
-                html += '</ul>';
+                html += '';
                 return html;
             }
             $('#pagination-container').pagination({
-                dataSource: [1, 2, 3, 4, 5, 6, 7, 195],
+                dataSource: resultArray,
                 callback: function(data, pagination) {
                     var html = template(data);
                     $('#results').html(html);
