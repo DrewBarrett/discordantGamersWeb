@@ -23,10 +23,10 @@ function getVids(pid) {
             key: 'AIzaSyBehqGZcuf5LyAXbrZTghunvEZtFVIlNSQ'
         },
         function (data) {
-            var results;
+            var results = "";
             $.each(data.items, function (i, item) {
-                results =
-                    '<div class=\"panel panel-default videopane social-footer\">' + 
+                results +=
+                    '<div class=\"panel panel-default videopane social-footer\">' +
                         '<a href=\"https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId + '\" class=\"videopane\">' +
                             '<div class=\"media panel-body videopane\">' +
                                 '<div class=\"media-left col-md-6 col-xs-10\">' +
@@ -38,8 +38,8 @@ function getVids(pid) {
                             '</div>' +
                        ' </a>' +
                 '</div>'
-                $('#results').append(results);
             });
+            $('#results').append(results);
         }
     );
 }
