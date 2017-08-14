@@ -1,9 +1,15 @@
 language: node_js
 install:
   - sudo npm install html-minifier -g
+  - npm install minifier
 
 script:
-  - html-minifier --minify-css 1 --minify-js 1 --html5 --input-dir . --output-dir minify --file-ext html --collapse-whitespace --collapse-inline-tag-whitespace --remove-comments
+  - mkdir deploy
+  - cp -R * deploy
+  - cd deploy
+  - rm -rf node_modules
+  - html-minifier --minify-css 1 --minify-js 1 --html5 --input-dir . --output-dir . --file-ext html --collapse-whitespace --collapse-inline-tag-whitespace --remove-comments
+  - ../node_modules/minifier/index.js . --template {{filename}}.{{ext}
 
 deploy:
   provider: pages
