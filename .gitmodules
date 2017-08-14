@@ -1,0 +1,6 @@
+[submodule "lib/simplePagination.js"]
+	path = lib/simplePagination.js
+	url = https://github.com/flaviusmatis/simplePagination.js
+[submodule "lib/paginationjs"]
+	path = lib/paginationjs
+	url = https://github.com/superRaytin/paginationjs

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TheGamingDoge</title>
+    <meta name="description" content="Sweet dreams are made of this." />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+        html, html, body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        #audioWrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-image: url('doge.gif');
+            background-position-x: 50%;
+            background-position-y: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+
+            #audioWrapper audio {
+                display: none;
+            }
+
+            #audioWrapper img {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                margin: 4px;
+            }
+    </style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-37553517-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div id="audioWrapper"> </div>
+    <audio src="doge.mp3" preload="auto" autobuffer autoplay loop> Your browser does not support the audio element. </audio>
+    <script>
+        var $frankerz = document.createElement("img");
+        $frankerz.src = "doge.jpeg";
+        document.getElementById("audioWrapper").appendChild($frankerz);
+
+        setInterval(function () {
+            $frankerz = $frankerz.cloneNode(true);
+            document.getElementById("audioWrapper").appendChild($frankerz);
+        }, 500);
+    </script>
+</body>
+</html>

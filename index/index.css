@@ -1,0 +1,35 @@
+﻿@charset "utf-8";
+
+#list {
+    list-style-type: none;
+    text-align: center;
+}
+
+    #list li {
+        padding-top: 10px;
+    }
+
+html, html {
+    background-color: #000000;
+    font-size: 42px;
+    color: #6C6C6C;
+    background-image: url(../holden/space.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+#list li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+    #list li a:hover {
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
