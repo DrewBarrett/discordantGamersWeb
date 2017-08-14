@@ -1,6 +1,9 @@
+sudo: required
 language: node_js
+node_js:
+  - "7"
 install:
-  - sudo npm install html-minifier -g
+  - npm install html-minifier -g
   - npm install minifier
 
 script:
