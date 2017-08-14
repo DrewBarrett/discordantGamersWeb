@@ -55,7 +55,7 @@ function getVids(pid) {
                     $('#results').html(html);
                 }
             })
-            document.getElementById("pagination-container").getElementsByTagName("ul")[0].addClass('pagination')
+            document.getElementById("pagination-container").getElementsByTagName("ul")[0].className += "pagination"
         }
     );
 }
