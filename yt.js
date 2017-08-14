@@ -50,6 +50,7 @@ function getVids(pid) {
             }
             $('#pagination-container').pagination({
                 dataSource: resultArray,
+                pageSize: 4,
                 callback: function(data, pagination) {
                     var html = template(data);
                     $('#results').html(html);
