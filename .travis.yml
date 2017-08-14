@@ -11,7 +11,7 @@ install:
 
 script:
   - html-minifier --minify-css 1 --minify-js 1 --html5 --input-dir . --output-dir . --file-ext html --collapse-whitespace --collapse-inline-tag-whitespace --remove-comments
-  - ../node_modules/minifier/index.js . --template {{filename}}.{{ext}
+  - ../node_modules/minifier/index.js . --template {{filename}}.{{ext}}
 
 deploy:
   provider: pages
