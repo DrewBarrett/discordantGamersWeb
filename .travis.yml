@@ -5,12 +5,12 @@ node_js:
 install:
   - npm install html-minifier -g
   - npm install minifier
-
-script:
   - mkdir deploy
   - cp -R * deploy
   - cd deploy
   - rm -rf node_modules
+
+script:
   - html-minifier --minify-css 1 --minify-js 1 --html5 --input-dir . --output-dir . --file-ext html --collapse-whitespace --collapse-inline-tag-whitespace --remove-comments
   - ../node_modules/minifier/index.js . --template {{filename}}.{{ext}
 
