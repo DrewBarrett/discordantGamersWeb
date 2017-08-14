@@ -53,9 +53,10 @@ function getVids(pid) {
                 callback: function(data, pagination) {
                     var html = template(data);
                     $('#results').html(html);
+                    document.getElementById("pagination-container").getElementsByTagName("ul")[0].className += "pagination"
                 }
             })
-            document.getElementById("pagination-container").getElementsByTagName("ul")[0].className += "pagination"
+
         }
     );
 }
