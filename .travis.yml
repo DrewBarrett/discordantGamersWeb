@@ -3,12 +3,10 @@ language: node_js
 node_js:
   - "7"
 install:
+  - mv -p * deploy
   - npm install html-minifier -g
   - npm install minifier
-  - mkdir deploy
-  - cp -R * deploy
   - cd deploy
-  - rm -rf node_modules
 
 script:
   - html-minifier --minify-css 1 --minify-js 1 --html5 --input-dir . --output-dir . --file-ext html --collapse-whitespace --collapse-inline-tag-whitespace --remove-comments
