@@ -1,0 +1,22 @@
+sudo: required
+language: node_js
+node_js:
+  - "7"
+install:
+  - mkdir deploy
+  - mv `ls -A | grep -v deploy` ./deploy
+  - npm install html-minifier -g
+  - npm install minifier
+  - cd deploy
+
+script:
+  - html-minifier --minify-css 1 --minify-js 1 --html5 --input-dir . --output-dir . --file-ext html --collapse-whitespace --collapse-inline-tag-whitespace --remove-comments
+  - ../node_modules/minifier/index.js . --template {{filename}}.{{ext}}
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  fqdn: www.discordantgamers.com
+  on:
+    branch: master
